@@ -12,7 +12,7 @@ class ContactsController extends Controller
     private function validateData() {
         $isValid = request()->validate([
             'name' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'birthday' => 'required',
             'company' => 'required',
         ]);
@@ -31,7 +31,7 @@ class ContactsController extends Controller
 
         $contact = request()->user()->contacts()->create($this->validateData());
 
-        return (new ContactResource($contact))->response()->status(Response::HTTP_CREATED);
+        return (new ContactResource($contact))->response()->setStatusCode(Response::HTTP_CREATED);
     }
 
     public function show(Contact $contact) {
@@ -45,7 +45,7 @@ class ContactsController extends Controller
 
         $contact->update($this->validateData());
 
-        return (new ContactResource($contact))->response()->status(Response::HTTP_OK);
+        return (new ContactResource($contact))->response()->setStatusCode(Response::HTTP_OK);
     }
 
     public function destory(Contact $contact) {

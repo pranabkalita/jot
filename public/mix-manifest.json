@@ -1,4 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/contacts-index.js": "/contacts-index.js",
+    "/example-component.js": "/example-component.js",
+    "/logout.js": "/logout.js",
+    "/birthday-index.js": "/birthday-index.js",
+    "/contacts-edit.js": "/contacts-edit.js",
+    "/contacts-show.js": "/contacts-show.js",
+    "/vendors~contacts-edit.js": "/vendors~contacts-edit.js"
 }
